@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import iconRed from "@/app/assets/icon.png";
+import iconRed from "../assets/icon.png";
 import Link from "next/link";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";

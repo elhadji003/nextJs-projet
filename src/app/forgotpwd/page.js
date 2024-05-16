@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import iconRed from "@/app/assets/icon.png";
+import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
