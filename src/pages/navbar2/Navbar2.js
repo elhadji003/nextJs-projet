@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faPlus, faRightToBracket, faUser } from '@fortawesome/free-solid-svg-icons';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import ProfileAdmin from "@/app/assets/img-2.jpg"
+import ProfileAdmin from "../../app/assets/img-2.jpg"
 import Image from "next/image";
 
 export default function Navbar2() {
