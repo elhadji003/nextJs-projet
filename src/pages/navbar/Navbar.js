@@ -25,7 +25,7 @@ import {
   FlexColumnContainer
 } from './NavabarStyle';
 
-import ProfileAdmin from "@/app/assets/img-2.jpg"
+import ProfileAdmin from "../../app/assets/img2.png"
 
 const Navbar = () => {
   return (

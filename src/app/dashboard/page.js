@@ -1,8 +1,10 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from '@/pages/sidebar/Sidebar';
-import Navbar from '@/pages/navbar/Navbar';
-import Card from '@/pages/card/Card';
+import Sidebar from '../../pages/sidebar/Sidebar';
+import Navbar from '../../pages/navbar/Navbar';
+import Card from '../../pages/card/Card';
+
+
 
 
 

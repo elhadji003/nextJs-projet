@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Link from "next/link";
-import iconRed from "@/app/assets/icon.png";
+import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLink, StyledForm, StyledFormContainer, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLink, StyledSubmitButton, StyledText } from "./ConnexionStyle";

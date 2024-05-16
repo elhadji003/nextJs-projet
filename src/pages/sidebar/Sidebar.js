@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faHome } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Image from 'next/image';
-import iconRed from "@/app/assets/icon.png";
+import iconRed from "../../app/assets/icon.png";
 import { Div1, Div2, ListLi, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarList, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from './SidebarStyle';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./sidebar.css"

@@ -59,7 +59,7 @@ const Data = [
   }
 ];
 
-function Card() {
+const Card = () => {
   return (
     <CardContainer className="my-3">
       <Content className="grid">
