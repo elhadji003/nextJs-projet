@@ -4,7 +4,7 @@ import Image from "next/image";
 import iconRed from "../assets/icon.png";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, StyledButton, StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledFrm, StyledFrmInput, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLien, StyledText, } from "../../styles/Connexion.Style";
+import { Form, StyledButton, StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledFrm, StyledFrmInput, StyledFrmLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLien, StyledText, } from "../../styles/Connexion.Style";
 
 
 const Inscription = () => {
@@ -20,15 +20,15 @@ const Inscription = () => {
         <StyledFrm>
           <StyledInfo>Inscrivez-vous en tant qu'admin</StyledInfo>
           <StyledFrmInput>
-            <StyledFrmLabelLabel htmlFor="username">Prénom</StyledFrmLabelLabel>
+            <StyledFrmLabel htmlFor="username">Prénom</StyledFrmLabel>
             <StyledInput id="username" type="text" />
           </StyledFrmInput>
           <StyledFrmInput>
-            <StyledFrmLabelLabel htmlFor="email">Email</StyledFrmLabelLabel>
+            <StyledFrmLabel htmlFor="email">Email</StyledFrmLabel>
             <StyledInput id="email" type="email" />
           </StyledFrmInput>
           <StyledFrmInput>
-            <StyledFrmLabelLabel htmlFor="password">Mot de passe</StyledFrmLabelLabel>
+            <StyledFrmLabel htmlFor="password">Mot de passe</StyledFrmLabel>
             <StyledInput id="password" type="password" />
           </StyledFrmInput>
           <StyledCheckboxContainer>

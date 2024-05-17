@@ -4,7 +4,7 @@ import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, StyledBackToLoginLien, StyledButton, StyledContainer, StyledFrm, StyledFrmInput, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledText, StyledTextInfo } from "../../styles/Connexion.Style";
+import { Form, StyledBackToLoginLien, StyledButton, StyledContainer, StyledFrm, StyledFrmInput, StyledFrmLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledText, StyledTextInfo } from "../../styles/Connexion.Style";
 
 
 const ForgotPwd = () => {
