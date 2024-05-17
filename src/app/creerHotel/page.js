@@ -2,7 +2,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { StyledFormInput} from "../connexion/ConnexionStyle";
+import { StyledFormInput} from "../connexion/Connexion.Style";
 import vector from "../assets/Vector.png"
 import {
   Container,
