@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import "bootstrap/dist/css/bootstrap.min.css";
+import ProfileAdmin from "../../app/assets/img-2.jpg"
+
 
 import { 
   Navbar2Container, 
@@ -30,9 +32,7 @@ import {
   HeaderButtonPlus,
   StyleSpanCreer,
   StyleIconCreer
-} from './Navbar2.Style';
-
-import ProfileAdmin from "../../app/assets/img2.png"
+} from '../../styles/Navbar2.Style';
 
 
 

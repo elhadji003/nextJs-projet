@@ -32,13 +32,13 @@ export const StyledText = styled.div`
   font-size: 1.125rem;
 `;
 
-export const StyledFormContainer = styled.div`
+export const Form = styled.div`
   width: 100%;
   max-width: 24rem;
   margin-bottom: 1rem;
 `;
 
-export const StyledForm = styled.form`
+export const StyledFrm = styled.form`
   width: 100%;
   margin-bottom: 1rem;
   background-color: #ffffff;
@@ -47,11 +47,11 @@ export const StyledForm = styled.form`
   padding: 1.5rem 1.5rem;
 `;
 
-export const StyledFormInput = styled.form`
+export const StyledFrmInput = styled.form`
   margin-bottom: 0.75rem; 
 `;
 
-export const StyledFormLabel = styled.label`
+export const StyledFrmLabel = styled.label`
   font-weight: bold;
   color: #45484B;
 `;

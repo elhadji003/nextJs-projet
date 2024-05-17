@@ -20,7 +20,7 @@ import {
   Address,
   DestTitle,
   Price,
-} from './Hotel.Style';
+} from '../../styles/Hotel.Style';
 
 
 const Data = [
@@ -85,7 +85,7 @@ const Data = [
   },
 ];
 
-function Hotel() {
+const Hotel = () => {
   return (
     <HotelSection>
       <SecContent>
@@ -108,6 +108,6 @@ function Hotel() {
       </SecContent>
     </HotelSection>
   );
-}
+};
 
 export default Hotel;

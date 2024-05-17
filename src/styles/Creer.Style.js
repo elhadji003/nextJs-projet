@@ -37,7 +37,7 @@ export const Title = styled.span`
   }
 `;
 
-export const Piod = styled.div`
+export const Form = styled.div`
   margin: 1rem 0;
 `;
 

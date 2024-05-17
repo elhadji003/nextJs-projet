@@ -2,14 +2,14 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { StyledFormInput} from "../connexion/Connexion.Style";
+import { StyledFrmInput} from "../../styles/Connexion.Style";
 import vector from "../assets/Vector.png"
 import {
   Container,
   Card,
   Title,
   Header,
-  Piod,
+  Form,
   Row,
   FrGr2oup,
   Label,
@@ -21,7 +21,7 @@ import {
   StyledSubmitCreer,
   FlexEnd,
   SpanAjouterPhoto
-} from "../creerHotel/Creer.Style";
+} from "../../styles/Creer.Style";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,21 +33,21 @@ const CreerHotel = () => {
           <FontAwesomeIcon icon={faArrowLeft} />
           <Title>Créer un nouveau hôtel</Title>
         </Header>
-        <Piod>
+        <Form>
           <Row>
             <FrGr2oup>
               <StyledFrInput>
                 <Label htmlFor="hotel-name">Nom de l'hôtel</Label>
                 <Input id="hotel-name" type="text" placeholder="CAP Marniane" />
               </StyledFrInput>
-              <StyledFormInput>
+              <StyledFrInput>
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" type="email" placeholder="Email" />
-              </StyledFormInput>
-              <StyledFormInput>
+              </StyledFrInput>
+              <StyledFrInput>
                 <Label htmlFor="price">Prix par nuit</Label>
                 <Input id="price" type="number" placeholder="125.000 XOF" />
-              </StyledFormInput>
+              </StyledFrInput>
             </FrGr2oup>
             <FrGr2oup>
               <StyledFrInput>
@@ -68,7 +68,7 @@ const CreerHotel = () => {
               </StyledFrInput>
             </FrGr2oup>
           </Row>
-        </Piod>
+        </Form>
         <Footer>
           <Label htmlFor="file">Ajouter une photo</Label>
           <Dropzone htmlFor="dropzone-file">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import "bootstrap/dist/css/bootstrap.min.css";
+import ProfileAdmin from "../../app/assets/img-2.jpg"
 
 import { 
   NavbarContainer, 
@@ -25,9 +26,8 @@ import {
   HeaderContainer,
   HiddenContainer,
   FlexColumnContainer
-} from './Navabar.Style';
+} from '../../styles/Navabar.Style';
 
-import ProfileAdmin from "../../app/assets/img2.png"
 
 const Navbar = () => {
   return (
