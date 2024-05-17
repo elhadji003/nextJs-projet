@@ -135,11 +135,11 @@ export const StyledButton = styled.button`
   }
 `;
 
-export const StyledForgotPasswordLink = styled.div`
+export const StyledForgotPasswordLien = styled.div`
   color: #ffcc00;
 `;
 
-export const StyledSignupLink = styled.div`
+export const StyledSignupLien = styled.div`
   color: white;
   margin-bottom: 0rem;
   a{

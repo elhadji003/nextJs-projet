@@ -4,7 +4,7 @@ import Link from "next/link";
 import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLink, StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLink, StyledSubmitButton, StyledText } from "./ConnexionStyle";
+import { StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLien, StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLien, StyledSubmitButton, StyledText } from "./ConnexionStyle";
 
 
 const Connexion = () => {
@@ -43,14 +43,14 @@ const Connexion = () => {
           </StyledForm>
         </StyledFormContainer>
         <Link href="/forgotpwd">
-        <StyledForgotPasswordLink>
+        <StyledForgotPasswordLien>
             Mot de passe oublié?
-        </StyledForgotPasswordLink>
+        </StyledForgotPasswordLien>
         </Link>
-        <StyledSignupLink>
+        <StyledSignupLien>
           Vous n'avez pas de compte?{" "}
           <Link href="/inscription">Inscription</Link>
-        </StyledSignupLink>
+        </StyledSignupLien>
       </StyledContainer>
     </>
   );

@@ -7,7 +7,6 @@ import Image from 'next/image';
 import iconRed from "../../app/assets/icon.png";
 import { Div1, Div2, Div3, Div4, List, ListLi, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarHeader, SidebarList, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from './SidebarStyle';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./sidebar.css"
 
 
 const Sidebar = () => {
