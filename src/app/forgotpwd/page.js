@@ -25,7 +25,7 @@ const ForgotPwd = () => {
               instructions sur la façon de modifier votre mot de passe.
             </StyledTextInfo>
             <StyledFrmInput>
-              <StyledFormLabel htmlFor="email" className="font-bold" style={{color: '#45484B'}}>Email</StyledFormLabel>
+              <StyledFrmLabel htmlFor="email" className="font-bold" style={{color: '#45484B'}}>Email</StyledFrmLabel>
               <StyledInput id="email" type="email" />
             </StyledFrmInput>
             <StyledButton type="button">Envoyez</StyledButton>

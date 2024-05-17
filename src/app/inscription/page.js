@@ -20,15 +20,15 @@ const Inscription = () => {
         <StyledFrm>
           <StyledInfo>Inscrivez-vous en tant qu'admin</StyledInfo>
           <StyledFrmInput>
-            <StyledFormLabel htmlFor="username">Prénom</StyledFormLabel>
+            <StyledFrmLabelLabel htmlFor="username">Prénom</StyledFrmLabelLabel>
             <StyledInput id="username" type="text" />
           </StyledFrmInput>
           <StyledFrmInput>
-            <StyledFormLabel htmlFor="email">Email</StyledFormLabel>
+            <StyledFrmLabelLabel htmlFor="email">Email</StyledFrmLabelLabel>
             <StyledInput id="email" type="email" />
           </StyledFrmInput>
           <StyledFrmInput>
-            <StyledFormLabel htmlFor="password">Mot de passe</StyledFormLabel>
+            <StyledFrmLabelLabel htmlFor="password">Mot de passe</StyledFrmLabelLabel>
             <StyledInput id="password" type="password" />
           </StyledFrmInput>
           <StyledCheckboxContainer>
