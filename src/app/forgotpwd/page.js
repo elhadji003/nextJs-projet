@@ -4,7 +4,7 @@ import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { StyledBackToLoginLink, StyledButton, StyledContainer,  StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledText, StyledTextInfo } from "../connexion/ConnexionStyle";
+import { StyledBackToLoginLien, StyledButton, StyledContainer,  StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledText, StyledTextInfo } from "../connexion/ConnexionStyle";
 
 
 const ForgotPwd = () => {
@@ -31,10 +31,10 @@ const ForgotPwd = () => {
             <StyledButton type="button">Envoyez</StyledButton>
           </StyledForm>
         </StyledFormContainer>
-        <StyledBackToLoginLink>
+        <StyledBackToLoginLien>
           Revenir à la{" "}
           <Link href="/">connexion</Link>
-        </StyledBackToLoginLink>
+        </StyledBackToLoginLien>
       </StyledContainer>
     </>
   );

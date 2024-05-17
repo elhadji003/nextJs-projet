@@ -4,7 +4,7 @@ import Image from "next/image";
 import iconRed from "../assets/icon.png";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { StyledButton, StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLink, StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLink, StyledText, } from "../connexion/ConnexionStyle";
+import { StyledButton, StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLink, StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLien, StyledSignupLink, StyledText, } from "../connexion/ConnexionStyle";
 
 
 const Inscription = () => {
@@ -40,9 +40,9 @@ const Inscription = () => {
           <StyledButton type="button">Inscription</StyledButton>
         </StyledForm>
       </StyledFormContainer>
-      <StyledSignupLink>
+      <StyledSignupLien>
         Vous avez déjà un compte? <Link href="/">Se connecter</Link>
-      </StyledSignupLink>
+      </StyledSignupLien>
     </StyledContainer>
   );
 };

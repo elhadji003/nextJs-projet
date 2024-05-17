@@ -147,7 +147,7 @@ export const StyledSignupLien = styled.div`
   }
 `;
 
-export const StyledBackToLoginLink = styled.div`
+export const StyledBackToLoginLien = styled.div`
   color: white;
   margin-bottom: 0rem;
   a{
