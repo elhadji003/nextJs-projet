@@ -44,16 +44,14 @@ export const SingleDestination = styled.div`
     width: 350px;
   }
   @media screen and (min-width: 1024px) {
-    width: 260px;
+    width: 250px;
   }
   @media screen and (min-width: 1280px) {
-    width: 250px;
-    // height: 100px;
+    width: 230px;
     position: relative;
-    // left: 1rem;
   }
   @media screen and (min-width: 1536px) {
-    width: 350px;
+    width: 250px;
   }
 `;
 
@@ -71,15 +69,15 @@ export const ImageDiv = styled.div`
     height: 200px;
   };
   @media screen and (min-width: 1024px) {
-    width: 260px;
+    width: 250px;
     height: 200px;
   };
   @media screen and (min-width: 1280px) {
-    width: 350px;
+    width: 300px;
     height: 150px;
   };
   @media screen and (min-width: 1536px) {
-    width: 350px;
+    width: 300px;
     height: 200px;
   }
 `;
