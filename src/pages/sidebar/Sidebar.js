@@ -43,18 +43,14 @@ const Sidebar = () => {
                         </List>
                         <ListLi>
                             <Link href="/dashboard">
-                                {/* <StyledLink> */}
                                     <FontAwesomeIcon icon={faHome} size='1x'/>
                                     Dashboard
-                                {/* </StyledLink> */}
                             </Link>
                         </ListLi>
                         <ListLi>
-                            <Link href="./cardHotel">
-                            {/* <StyledLink> */}
+                            <Link href="/cardHotel">
                                 <FontAwesomeIcon icon={faHome} size='1x'/>
                                 Listes des Hotels
-                            {/* </StyledLink> */}
                             </Link>
                         </ListLi>
                         </SidebarList>
