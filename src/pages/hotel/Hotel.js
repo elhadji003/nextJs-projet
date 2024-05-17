@@ -20,7 +20,6 @@ import {
   Price,
 } from './HotelStyle';
 
-// import "./hote.css"
 
 const Data = [
   {

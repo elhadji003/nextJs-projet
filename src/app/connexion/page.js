@@ -4,7 +4,7 @@ import Link from "next/link";
 import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLink, StyledForm, StyledFormContainer, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLink, StyledSubmitButton, StyledText } from "./ConnexionStyle";
+import { StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLink, StyledForm, StyledFormContainer, StyledFormInput, StyledFormLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLink, StyledSubmitButton, StyledText } from "./ConnexionStyle";
 
 
 const Connexion = () => {
@@ -20,14 +20,14 @@ const Connexion = () => {
         <StyledFormContainer>
           <StyledForm>
             <StyledInfo>Connectez-vous en tant qu'admin</StyledInfo>
-            <div className="mb-2">
-              <label htmlFor="email" className="font-bold" style={{color: '#45484B'}}>Email</label>
+            <StyledFormInput>
+              <StyledFormLabel htmlFor="email">Email</StyledFormLabel>
               <StyledInput id="email" type="email" />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="password" className="font-bold" style={{color: '#45484B'}}>Mot de passe</label>
+            </StyledFormInput>
+            <StyledFormInput>
+              <StyledFormLabel htmlFor="password">Mot de passe</StyledFormLabel>
               <StyledInput id="password" type="password" />
-            </div>
+            </StyledFormInput>
             <StyledCheckboxContainer>
               <StyledCheckboxInput
                 type="checkbox"
@@ -49,7 +49,7 @@ const Connexion = () => {
         </Link>
         <StyledSignupLink>
           Vous n'avez pas de compte?{" "}
-          <Link href="/inscription" style={{color: "#ffcc00"}}>Inscription</Link>
+          <Link href="/inscription">Inscription</Link>
         </StyledSignupLink>
       </StyledContainer>
     </>

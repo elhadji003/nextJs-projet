@@ -1,6 +1,10 @@
+"use client"
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.div``;
+
+export const SidebarHeader = styled.div``;
+
 
 export const StyledSidebarNav = styled.div`
   position: fixed;
@@ -11,12 +15,44 @@ export const StyledSidebarNav = styled.div`
   z-index: 40;
   width: 260px;
   height: 100%;
-  background-color: #333; /* Je suppose que bg-neutral-900 correspond à #333 */
-  border-right: 1px solid #ccc; /* Je suppose que c'est une couleur de bordure grise */
+  background-color: #333; 
+  border-right: 1px solid #ccc;
   
   &.active {
     // Ajoutez des styles pour le cas où la classe active est présente
   }
+
+  @media only screen and (min-width: 320px) {
+
+    width: 12rem;
+    left: -190px;
+    transition: 0.4s;
+  
+    &.active{
+      left: 0px;
+      width: 14rem;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+      width: 12rem;
+      left: -190px;
+      transition: 0.4s;
+  
+      &.active{
+      left: 0px;
+      width: 14rem;
+      }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 180px;
+    left: 0px;
+  }
+  @media only screen and (min-width: 1280px) {
+    width: 260px;
+    left: 0px;
+  }
+  
 `;
 
 export const Div1 = styled.div`
@@ -33,6 +69,8 @@ export const Div2 = styled.div`
   justify-content: center;
   gap: 0.75rem;
 `;
+
+export const Div3 = styled.div``;
 
 export const RedProductTitle = styled.div`
     color: white;
@@ -107,9 +145,8 @@ export const ListLi = styled.li`
     left: 0px
     right: 0;
   }
-`;
-export const StyledLink = styled.a`
-  position: relative;
+  a{
+    position: relative;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -126,4 +163,37 @@ export const StyledLink = styled.a`
   text-overflow: ellipsis;
   max-width: 12rem;
   padding: 0.75rem;
+  }
 `;
+
+export const List = styled.li``;
+
+export const Div4 = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: azure;
+  padding: 0.75rem;
+
+`;
+
+// export const StyledLink = styled.a`
+//   position: relative;
+//   text-decoration: none;
+//   display: flex;
+//   align-items: center;
+//   gap: 0.75rem;
+//   height: 3rem; 
+//   transition: background-color 0.3s, color 0.3s;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: gray;
+//   font-size: bold; 
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   max-width: 12rem;
+//   padding: 0.75rem;
+// `;
+

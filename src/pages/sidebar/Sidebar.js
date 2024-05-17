@@ -5,7 +5,7 @@ import { faChevronLeft, faChevronRight, faHome } from '@fortawesome/free-solid-s
 import Link from 'next/link';
 import Image from 'next/image';
 import iconRed from "../../app/assets/icon.png";
-import { Div1, Div2, ListLi, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarList, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from './SidebarStyle';
+import { Div1, Div2, Div3, Div4, List, ListLi, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarHeader, SidebarList, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from './SidebarStyle';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./sidebar.css"
 
@@ -21,11 +21,11 @@ const Sidebar = () => {
 
     return (
         <SidebarContainer>
-            <div className="Sidebar">
+            <SidebarHeader>
                 <StyledSidebarNav className={`${isSidebarActive ? 'active' : ''}`}>
                         <Div1>
                             <Div2>
-                                <div className="icon"> <Image src={iconRed} alt='logo Red'/></div>
+                                <Div3> <Image src={iconRed} alt='logo Red'/></Div3>
                                 <RedProductTitle>Red Product</RedProductTitle>
                                 <ToggleWrapper>
                                 <ToggleButton onClick={toggleSidebar}>
@@ -37,35 +37,31 @@ const Sidebar = () => {
                         </Div1>
                         <SidebarContainer2>
                         <SidebarList>
-                        <li>
-                            <div className="d-flex flex-row align-items-center p-3">
-                                <div style={{color: "azure"}}>Principale</div>
-                            </div>
-                        </li>
+                        <List>
+                            <Div4>
+                                Principale
+                            </Div4>
+                        </List>
                         <ListLi>
                             <Link href="/dashboard">
-                                <StyledLink>
-                                    <span className="icon">
-                                        <FontAwesomeIcon icon={faHome} size='1x'/>
-                                    </span>
-                                    <span>Dashboard</span>
-                                </StyledLink>
+                                {/* <StyledLink> */}
+                                    <FontAwesomeIcon icon={faHome} size='1x'/>
+                                    Dashboard
+                                {/* </StyledLink> */}
                             </Link>
                         </ListLi>
                         <ListLi>
                             <Link href="./cardHotel">
-                            <StyledLink>
-                                <span className="icon">
-                                    <FontAwesomeIcon icon={faHome} size='1x'/>
-                                </span>
-                                <span className="text">Listes des Hotels</span>
-                            </StyledLink>
+                            {/* <StyledLink> */}
+                                <FontAwesomeIcon icon={faHome} size='1x'/>
+                                Listes des Hotels
+                            {/* </StyledLink> */}
                             </Link>
                         </ListLi>
                         </SidebarList>
                     </SidebarContainer2>
                 </StyledSidebarNav>
-            </div>
+            </SidebarHeader>
         </SidebarContainer>
     )
 }

@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import { 
   NavbarContainer, 
   NavbarNav, 
@@ -29,7 +31,7 @@ import ProfileAdmin from "../../app/assets/img2.png"
 
 const Navbar = () => {
   return (
-    <NavbarContainer className="Navbar">
+    <NavbarContainer>
       <NavbarNav>
         <DivNv1>
           <DivNav2>
@@ -42,17 +44,17 @@ const Navbar = () => {
                 <SearchContainer>
                     <SearchInput type="text" placeholder="🔎 rechercher"/>
                 </SearchContainer>
-              <BellIcon className="search">
-                <Link href="/notification" className="pointer-events-auto text-black">
-                  <FontAwesomeIcon icon={faBell} />
+              <BellIcon>
+                <Link href="/notification">
+                  <FontAwesomeIcon icon={faBell} color="black" />
                 </Link>
               </BellIcon>
-              <ProfileImage className="search">
+              <ProfileImage>
                 <ProfileAdminImage src={ProfileAdmin} alt='Profile Admin' width={40} height={40} />
               </ProfileImage>
               <LogoutIcon>
-                <Link href="/" className="text-dark">
-                  <FontAwesomeIcon icon={faRightToBracket} />
+                <Link href="/">
+                  <FontAwesomeIcon icon={faRightToBracket} color="black"/>
                 </Link>
               </LogoutIcon>
             </Toolbar>

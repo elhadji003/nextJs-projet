@@ -71,6 +71,7 @@ export const IconRow = styled.div`
   width: 330px;
   hight: 100px;
   display: flex;
+  padding: 0.5rem; 
   flex-direction: row;
   align-items: center;
   border-radius: 10px;
@@ -197,5 +198,19 @@ export const ButtonIcon = styled.span`
   align-self: center;
   font-size: 18px;
 `;
+
+export const StyledSpan = styled.span`
+  display: flex;
+  align-items: center;
+`;
+
+export const StyledPrice = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+
+
 // Define more styled-components for colors and other elements if needed...
 

@@ -48,6 +48,8 @@ export const SingleDestination = styled.div`
   }
   @media screen and (min-width: 1280px) {
     width: 350px;
+    position: relative;
+    left: 1rem;
   }
   @media screen and (min-width: 1536px) {
     width: 350px;

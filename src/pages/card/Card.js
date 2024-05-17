@@ -3,7 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeOpen, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { faP } from '@fortawesome/free-solid-svg-icons/faP';
-import { BorderIcon, CardContainer, CardInfo, Content, IconRow, Number, Partie } from './Card.Style';
+import { BorderIcon, CardContainer, CardInfo, Content, IconRow, Number, Partie, StyledPrice } from './Card.Style';
 
 const Data = [
   {
@@ -61,21 +61,21 @@ const Data = [
 
 const Card = () => {
   return (
-    <CardContainer className="my-3">
-      <Content className="grid">
-        {Data.map(({ id, icon, number, partie, text, background }, index) => (
-          <IconRow className="rowIcon p-2" key={id} data-aos="fade-up">
+    <CardContainer>
+      <Content>
+        {Data.map(({ id, icon, number, partie, text, background }) => (
+          <IconRow key={id} data-aos="fade-up">
             <BorderIcon style={{background}}>
               {icon}
             </BorderIcon>
             <CardInfo>
-              <span className="continent flex items-center">
+              <StyledPrice>
                 <Number>{number}</Number>
                 <Partie> {partie} </Partie>
-              </span>
-              <div className="price flex">
+              </StyledPrice>
+              <StyledPrice>
                 {text}
-              </div>
+              </StyledPrice>
             </CardInfo>
           </IconRow>
         ))}

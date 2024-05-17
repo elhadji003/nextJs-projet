@@ -1,3 +1,4 @@
+"use client"
 import styled from "styled-components";
 
 export const StyledContainer = styled.div`
@@ -44,6 +45,15 @@ export const StyledForm = styled.form`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   padding: 1.5rem 1.5rem;
+`;
+
+export const StyledFormInput = styled.form`
+  margin-bottom: 0.75rem; 
+`;
+
+export const StyledFormLabel = styled.label`
+  font-weight: bold;
+  color: #45484B;
 `;
 
 export const StyledInfo = styled.p`
@@ -108,11 +118,44 @@ export const StyledSubmitButton = styled.button`
   }
 `;
 
+export const StyledButton = styled.button`
+  width: 100%;
+  background: #45484B;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  &:hover {
+    background-color: #000;
+  }
+`;
+
 export const StyledForgotPasswordLink = styled.div`
   color: #ffcc00;
-  margin-bottom: 0rem;
 `;
 
 export const StyledSignupLink = styled.div`
-  color: #ffffff;
+  color: white;
+  margin-bottom: 0rem;
+  a{
+    color: #ffcc00;
+  }
+`;
+
+export const StyledBackToLoginLink = styled.div`
+  color: white;
+  margin-bottom: 0rem;
+  a{
+    color: #ffcc00;
+  }
+`;
+
+export const StyledTextInfo = styled.div`
+color: #a1a2a3;
+margin-bottom: 2rem;
 `;
