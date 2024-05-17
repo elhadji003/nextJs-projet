@@ -49,7 +49,7 @@ export const StyledSidebarNav = styled.div`
     left: 0px;
   }
   @media only screen and (min-width: 1280px) {
-    width: 260px;
+    width: 220px;
     left: 0px;
   }
   

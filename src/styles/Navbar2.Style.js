@@ -48,6 +48,7 @@ export const Title2 = styled.span`
   border-radius: 0.375rem;
   font-size: 0.875rem;
   font-weight: bold; 
+  // left: 2rem;
 
   @media (min-width: 320px) {
     display: none;
@@ -127,6 +128,7 @@ export const Header2Title = styled.div`
   font-size: 1.25rem;
   font-weight: 300;
   padding: 0.3rem;
+  left: 0.7rem;
 
 
    @media (min-width: 320px) {

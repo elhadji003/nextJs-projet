@@ -20,7 +20,7 @@ export const SecContent = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
   @media screen and (min-width: 1280px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -47,9 +47,10 @@ export const SingleDestination = styled.div`
     width: 260px;
   }
   @media screen and (min-width: 1280px) {
-    width: 350px;
+    width: 250px;
+    // height: 100px;
     position: relative;
-    left: 1rem;
+    // left: 1rem;
   }
   @media screen and (min-width: 1536px) {
     width: 350px;
@@ -75,7 +76,7 @@ export const ImageDiv = styled.div`
   };
   @media screen and (min-width: 1280px) {
     width: 350px;
-    height: 200px;
+    height: 150px;
   };
   @media screen and (min-width: 1536px) {
     width: 350px;

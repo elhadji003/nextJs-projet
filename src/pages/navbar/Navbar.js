@@ -21,11 +21,12 @@ import {
   FlexContainer,
   SearchContainer,
   SearchInput,
-  HeaderTitle,
-  HeaderSubtitle,
-  HeaderContainer,
-  HiddenContainer,
-  FlexColumnContainer
+  Divmere,
+  DivChild,
+  DivSecond,
+  Header_Wrapper,
+  Header_Box,
+  Header_Span
 } from '../../styles/Navabar.Style';
 
 
@@ -61,16 +62,14 @@ const Navbar = () => {
           </DivNav2>
         </DivNv1>
       </NavbarNav>
-      <HeaderContainer>
-        <HiddenContainer>
-          <FlexColumnContainer>
-            <HeaderTitle>
-              Bienvenue sur RED Product
-              <HeaderSubtitle>Lorem ipsum dolor sit amet consectetur adipisicing elit.</HeaderSubtitle>
-            </HeaderTitle>
-          </FlexColumnContainer>
-        </HiddenContainer>
-      </HeaderContainer>
+      
+      <Header_Wrapper>
+        <Header_Box>
+          <Header_Span>Bienvenue sur Red Product</Header_Span>
+          <Header_Span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </Header_Span>
+        </Header_Box>
+      </Header_Wrapper>
+      
     </NavbarContainer>
   );
 }

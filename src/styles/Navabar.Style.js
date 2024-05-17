@@ -49,6 +49,7 @@ export const Title = styled.span`
   border-radius: 0.375rem;
   font-size: 0.875rem;
   font-weight: bold; 
+  left: 0.5rem;
 
   @media (min-width: 320px) {
     display: none;
@@ -118,47 +119,20 @@ export const ProfileAdminImage = styled(Image)`
 
 `;
 
-export const HeaderTitle = styled.div`
+export const Header_Wrapper = styled.div`
+
+` 
+
+export const Header_Box = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
-  color: var(--text-dark);
-  border-radius: 0.375rem;
-  font-size: 1.25rem;
-  font-weight: 300;
-`;
-
-export const HeaderSubtitle = styled.span`
   font-size: 0.875rem;
-`;
+  padding: 0.5rem;
+  margin-left: 2rem;
+` 
+export const Header_Span = styled.span`
 
-export const HeaderContainer = styled.header`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-
-  @media (min-width: 640px) {
-    align-items: stretch; 
-    justify-content: flex-start;
-  }
-`;
-
-export const HiddenContainer = styled.div`
-  display: none;
-
-  @media (min-width: 640px) {
-    display: block;
-    margin-left: 1.5rem; /* Correspond à sm:ml-6 */
-  }
-`;
-
-export const FlexColumnContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; 
-  margin: 0.5rem 0;
-`;
+` 
 
 
 
