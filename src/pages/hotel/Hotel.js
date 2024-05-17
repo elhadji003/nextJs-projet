@@ -7,6 +7,8 @@ import img3 from "../../app/assets/img3.png";
 import img4 from "../../app/assets/img4.png";
 import img5 from "../../app/assets/img5.png";
 import img6 from "../../app/assets/img6.png";
+import img7 from "../../app/assets/img7.png";
+import img8 from "../../app/assets/img8.png";
 
 import {
   HotelSection,
@@ -18,7 +20,7 @@ import {
   Address,
   DestTitle,
   Price,
-} from './HotelStyle';
+} from './Hotel.Style';
 
 
 const Data = [
@@ -60,6 +62,22 @@ const Data = [
   {
     id: 6,
     imgSrc: img6,
+    destTitle: "Hôtel Saly",
+    location: "Mbour, Sénégal",
+    grade: "CULTURAL RELAX",
+    fees: "20000 XOF par nuit",
+  },
+  {
+    id: 7,
+    imgSrc: img7,
+    destTitle: "Hôtel Saly",
+    location: "Mbour, Sénégal",
+    grade: "CULTURAL RELAX",
+    fees: "20000 XOF par nuit",
+  },
+  {
+    id: 8,
+    imgSrc: img8,
     destTitle: "Hôtel Saly",
     location: "Mbour, Sénégal",
     grade: "CULTURAL RELAX",

@@ -25,7 +25,7 @@ import {
   HeaderContainer,
   HiddenContainer,
   FlexColumnContainer
-} from './NavabarStyle';
+} from './Navabar.Style';
 
 import ProfileAdmin from "../../app/assets/img2.png"
 
