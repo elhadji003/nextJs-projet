@@ -130,13 +130,14 @@ color: #ffffff;
 text-align: center;
 font-weight: bold;
 border-radius: 1rem;
-padding: 0.75rem 0.75rem;
+padding: 1rem 1rem;
 margin-top: 1rem;
 border-radius: 0.5rem;
 transition: background-color 0.3s;
 cursor: pointer;
 outline: none;
 border: none;
+line-height: 5px;
 &:hover {
   background-color: #000;
 }

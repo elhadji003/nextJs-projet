@@ -82,7 +82,7 @@ const CreerHotel = ({ handleClose }) => {
         </Footer>
         <FlexEnd>
           <Link href="/dashboard" style={{ textDecoration: "none" }}>
-            <StyledSubmitCreer type="submit">Se connecter</StyledSubmitCreer>
+            <StyledSubmitCreer type="submit">Enrigister</StyledSubmitCreer>
           </Link>
         </FlexEnd>
       </Card>

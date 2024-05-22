@@ -201,7 +201,7 @@ export const ProfileBas = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-top: 200px;
+  margin-top: 290px;
   border-top: 1px solid white;
   padding: 10px;
 `
