@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faPlus, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProfileAdmin from "../../app/assets/img-2.jpg";
-import { signOut } from "next-auth/react";
-
 
 import { 
   Navbar2Container, 
@@ -38,14 +36,6 @@ import {
 import { signOut } from "next-auth/react";
 
 const Navbar2 = ({ handleClick }) => {
-
-  const handleSignOut = () => {
-    signOut({
-      redirect: true,
-      callbackUrl: "/" 
-    });
-  };
-
   return (
     <>
       <Navbar2Container>
@@ -70,9 +60,9 @@ const Navbar2 = ({ handleClick }) => {
                   <ProfileAdminImage src={ProfileAdmin} alt='Profile Admin' width={40} height={40} />
                 </Profile2Image>
                 <Logout2Icon>
-                <StyledButton type="button" onClick={handleSignOut}>
-                  <FontAwesomeIcon icon={faRightToBracket} color="black" />
-                </StyledButton>
+                  <button onClick={() => signOut()}>
+                    <FontAwesomeIcon icon={faRightToBracket} color="black" />
+                  </button>
                 </Logout2Icon>
               </Toolbar2>
             </Navbar2Div2>
