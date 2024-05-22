@@ -1,13 +1,77 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { StyledCheckboxContainer, StyledCheckboxInput, StyledCheckboxText, StyledContainer, StyledForgotPasswordLien, StyledFrm, Form, StyledFrmInput, StyledFrmLabel, StyledIcon, StyledInfo, StyledInput, StyledLogoContainer, StyledSignupLien, StyledSubmitButton, StyledText } from "../../styles/Connexion.Style";
-
+import { 
+  StyledCheckboxContainer, 
+  StyledCheckboxInput, 
+  StyledCheckboxText, 
+  StyledContainer, 
+  StyledForgotPasswordLien, 
+  StyledFrm, 
+  Form, 
+  StyledFrmInput, 
+  StyledFrmLabel, 
+  StyledIcon, 
+  StyledInfo, 
+  StyledInput, 
+  StyledLogoContainer, 
+  StyledSignupLien, 
+  StyledSubmitButton, 
+  StyledText, 
+  ErrorMessage 
+} from "../../styles/Connexion.Style";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Connexion = () => {
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const { email, password } = values;
+  const router = useRouter();
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  const resetMessage = () => {
+    setError("");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!email || !password) {
+      setError("All fields are necessary and terms must be accepted!");
+      setTimeout(resetMessage, 5000);
+      return;
+    }
+
+    try {
+      const res = await signIn("credentials", {
+        email, 
+        password, 
+        redirect: false,
+      });
+
+      if (res.error) {
+        setError("Invalid Credentials");
+        setTimeout(resetMessage, 5000);
+        return;
+      }
+
+      router.push("/dashboard");
+    } catch (error) {
+      console.log("Error: ", error);
+    }
+  };
+
   return (
     <>
       <StyledContainer>
@@ -18,16 +82,31 @@ const Connexion = () => {
           <StyledText>Red Product</StyledText>
         </StyledLogoContainer>
         <Form>
-          <StyledFrm>
+          <StyledFrm onSubmit={handleSubmit}>
             <StyledInfo>Connectez-vous en tant qu'admin</StyledInfo>
             <StyledFrmInput>
               <StyledFrmLabel htmlFor="email">Email</StyledFrmLabel>
-              <StyledInput id="email" type="email" />
+              <StyledInput 
+                id="email" 
+                name="email"
+                type="email" 
+                value={email}
+                onChange={handleChange} 
+              />
             </StyledFrmInput>
             <StyledFrmInput>
               <StyledFrmLabel htmlFor="password">Mot de passe</StyledFrmLabel>
-              <StyledInput id="password" type="password" />
+              <StyledInput 
+                id="password" 
+                name="password"
+                type="password" 
+                value={password}
+                onChange={handleChange} 
+              />
             </StyledFrmInput>
+            {error && (
+              <ErrorMessage>{error}</ErrorMessage>
+            )}
             <StyledCheckboxContainer>
               <StyledCheckboxInput
                 type="checkbox"
@@ -37,15 +116,13 @@ const Connexion = () => {
               />
               <StyledCheckboxText>Garder-moi connecter</StyledCheckboxText>
             </StyledCheckboxContainer>
-            <Link href="/dashboard">
-              <StyledSubmitButton type="submit">Se connecter</StyledSubmitButton>
-            </Link>
+            <StyledSubmitButton type="submit">Se connecter</StyledSubmitButton>
           </StyledFrm>
         </Form>
         <Link href="/forgotpwd">
-        <StyledForgotPasswordLien>
+          <StyledForgotPasswordLien>
             Mot de passe oublié?
-        </StyledForgotPasswordLien>
+          </StyledForgotPasswordLien>
         </Link>
         <StyledSignupLien>
           Vous n'avez pas de compte?{" "}

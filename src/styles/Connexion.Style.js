@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StyledContainer = styled.div`
   background-color: #1e1e1e;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -141,7 +141,7 @@ export const StyledForgotPasswordLien = styled.div`
 
 export const StyledSignupLien = styled.div`
   color: white;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
   a{
     color: #ffcc00;
   }
@@ -159,3 +159,27 @@ export const StyledTextInfo = styled.div`
 color: #a1a2a3;
 margin-bottom: 2rem;
 `;
+
+export const ErrorMessage = styled.div`
+  background: red;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #6a0303;
+  width: 100%
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+
+`
+
+export const SuccessMessage = styled.div`
+  background: lime;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 100%
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #037430;
+
+`

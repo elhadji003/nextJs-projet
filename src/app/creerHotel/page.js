@@ -2,7 +2,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { StyledFrmInput} from "../../styles/Connexion.Style";
+import { StyledFrmInput } from "../../styles/Connexion.Style";
 import vector from "../assets/Vector.png"
 import {
   Container,
@@ -20,17 +20,20 @@ import {
   StyledFrInput,
   StyledSubmitCreer,
   FlexEnd,
-  SpanAjouterPhoto
+  SpanAjouterPhoto,
 } from "../../styles/Creer.Style";
 import Link from "next/link";
 import Image from "next/image";
+import { ButtonModal } from "../../styles/Navbar2.Style";
 
-const CreerHotel = () => {
+const CreerHotel = ({ handleClose }) => {
   return (
     <Container>
       <Card>
         <Header>
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <ButtonModal onClick={handleClose}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </ButtonModal>
           <Title>Créer un nouveau hôtel</Title>
         </Header>
         <Form>
@@ -72,16 +75,16 @@ const CreerHotel = () => {
         <Footer>
           <Label htmlFor="file">Ajouter une photo</Label>
           <Dropzone htmlFor="dropzone-file">
-            <Image src={vector} alt="Vector"/>
+            <Image src={vector} alt="Vector" />
             <SpanAjouterPhoto>Ajouter une photo</SpanAjouterPhoto>
-            <Input id="dropzone-file" type="file" style={{display: "none"}} />
+            <Input id="dropzone-file" type="file" style={{ display: "none" }} />
           </Dropzone>
         </Footer>
-             <FlexEnd>
-             <Link href="/dashboard">
-              <StyledSubmitCreer type="submit">Se connecter</StyledSubmitCreer>
-            </Link>
-             </FlexEnd>
+        <FlexEnd>
+          <Link href="/dashboard" style={{ textDecoration: "none" }}>
+            <StyledSubmitCreer type="submit">Se connecter</StyledSubmitCreer>
+          </Link>
+        </FlexEnd>
       </Card>
     </Container>
   );

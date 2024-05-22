@@ -93,7 +93,10 @@ export const Continent = styled.span`
 
 export const Address = styled.span`
   font-size: 0.6rem;
-  color: #555;
+  color: red;
+
+
+
 
   @media screen and (min-width: 320px) {
     font-size: 0.8rem;
@@ -108,9 +111,16 @@ export const Address = styled.span`
 export const DestTitle = styled.p`
   font-size: 1rem;
   margin: 0.5rem 0;
+  color: #555;
+
 `;
 
 export const Price = styled.div`
   font-size: 0.9rem;
   color: #ff5a5f;
 `;
+
+export const Modal = styled.div`
+  width: 100%;
+  hight: 100%; 
+`

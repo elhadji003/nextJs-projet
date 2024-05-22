@@ -156,6 +156,11 @@ export const Header1Subtitle = styled.span`
   text-decoration: none;
 `;
 
+export const ButtonModal = styled.button`
+  background: none;
+  border: none;
+`;
+
 export const Header2Subtitle = styled.span`
   font-size: 0.875rem;
   font-size: 1.5rem;
