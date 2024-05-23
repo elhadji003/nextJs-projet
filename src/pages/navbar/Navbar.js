@@ -21,12 +21,11 @@ import {
   FlexContainer,
   SearchContainer,
   SearchInput,
-
   Header_Wrapper,
   Header_Box,
-  Header_Span
+  Header_Span,
+  IconButton
 } from '../../styles/Navabar.Style';
-import { StyledButton } from "../../styles/Connexion.Style";
 import { signOut } from "next-auth/react";
 
 
@@ -54,9 +53,9 @@ const Navbar = () => {
                 <ProfileAdminImage src={ProfileAdmin} alt='Profile Admin' width={40} height={40} />
               </ProfileImage>
               <LogoutIcon>
-                <StyledButton onClick={() => signOut()}>
+                <IconButton onClick={() => signOut()}>
                   <FontAwesomeIcon icon={faRightToBracket} color="black"/>
-                </StyledButton>
+                </IconButton>
               </LogoutIcon>
             </Toolbar>
           </DivNav2>

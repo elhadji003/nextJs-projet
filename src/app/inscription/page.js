@@ -5,6 +5,8 @@ import iconRed from "../assets/icon.png";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRouter } from "next/navigation";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 import {
   ErrorMessage,
   Form,
@@ -25,7 +27,8 @@ import {
   SuccessMessage,
 } from "../../styles/Connexion.Style";
 
-const Inscription = () => {
+const Inscription = async () => {
+
   const [values, setValues] = useState({
     fullName: "",
     email: "",
@@ -124,7 +127,7 @@ const Inscription = () => {
   };
 
   return (
-    <StyledContainer>
+        <StyledContainer>
       <StyledLogoContainer>
         <StyledIcon>
           <Image src={iconRed} alt="logo Red" />

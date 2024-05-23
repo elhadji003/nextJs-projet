@@ -4,14 +4,13 @@ import { connectMongoDB } from "../../../../../lib/mongodb";
 import User from "../../../../../models/user";
 import bcrypt from "bcryptjs";
 
-const authOptions = {
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "credentials",
       credentials: {},
       async authorize(credentials) {
         const { email, password } = credentials;
-
         try {
           await connectMongoDB();
           const user = await User.findOne({ email });
@@ -28,7 +27,7 @@ const authOptions = {
           return {
             id: user._id,
             email: user.email,
-            name: user.name
+            name: user.fullName
           };
         } catch (error) {
           console.log('Error: ', error);

@@ -115,6 +115,11 @@ export const LogoutIcon = styled.div`
 
 `;
 
+export const IconButton = styled.button`
+  background: none;
+  border: none;
+`;
+
 export const ProfileAdminImage = styled(Image)`
 
 `;

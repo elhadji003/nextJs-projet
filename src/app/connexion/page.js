@@ -4,6 +4,8 @@ import Link from "next/link";
 import iconRed from "../assets/icon.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { 
   StyledCheckboxContainer, 
   StyledCheckboxInput, 
@@ -23,10 +25,8 @@ import {
   StyledText, 
   ErrorMessage 
 } from "../../styles/Connexion.Style";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
 
-const Connexion = () => {
+export default function Connexion() {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -54,7 +54,7 @@ const Connexion = () => {
     }
 
     try {
-      const res = await signIn("credentials", {
+      const res = await signIn('credentials', {
         email, 
         password, 
         redirect: false,
@@ -66,12 +66,13 @@ const Connexion = () => {
         return;
       }
 
-      router.push("/dashboard");
+      router.replace("/dashboard");
     } catch (error) {
       console.log("Error: ", error);
     }
   };
 
+  
   return (
     <>
       <StyledContainer>
@@ -133,4 +134,3 @@ const Connexion = () => {
   );
 };
 
-export default Connexion;

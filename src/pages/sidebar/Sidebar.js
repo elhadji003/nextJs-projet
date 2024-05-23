@@ -1,14 +1,15 @@
 "use client"
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faHome, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import iconRed from "../../app/assets/icon.png";
-import { Div1, Div2, Div3, Div4, List, ListLi, Onligne, OnligneFlex, ProfileBas, ProfileTextBas, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarHeader, SidebarList, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from '../../styles/Sidebar.Style';
+import { Div1, Div2, Div3, Div4, List, ListLi, Onligne, OnligneFlex, ProfileBas, ProfileTextBas, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarHeader, SidebarList, SignOut, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from '../../styles/Sidebar.Style';
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProfileAdmin from "../../app/assets/img-2.jpg"
-import { ProfileAdminImage, ProfileImage } from '../../styles/Navabar.Style';
+import { IconButton, ProfileAdminImage, ProfileImage } from '../../styles/Navabar.Style';
+import { signOut, useSession } from 'next-auth/react';
 
 
 
@@ -20,6 +21,9 @@ const Sidebar = () => {
         setSidebarActive(!isSidebarActive);
         setChevron(prevChange => !prevChange);
     };
+    
+    const { data: session } = useSession()
+
 
     return (
         <SidebarContainer>
@@ -62,9 +66,15 @@ const Sidebar = () => {
                                 <ProfileAdminImage src={ProfileAdmin} alt='Profile Admin' width={40} height={40} />
                             </ProfileImage>
                             <ProfileTextBas>
-                                Mamadou Badiane <OnligneFlex><Onligne></Onligne> en ligne</OnligneFlex>
+                                {session?.user?.name} <OnligneFlex><Onligne></Onligne> en ligne</OnligneFlex>
                             </ProfileTextBas>
                         </ProfileBas>
+
+                        <SignOut>
+                            <IconButton onClick={() => signOut()}>
+                                <FontAwesomeIcon icon={faRightToBracket} color="white" size='2x'/>
+                            </IconButton>
+                        </SignOut>
                         
                         </SidebarList>
                     </SidebarContainer2>

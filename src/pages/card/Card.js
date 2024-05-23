@@ -64,7 +64,7 @@ const Card = () => {
       <Content>
         {Data.map(({ id, icon, number, partie, text, background }) => (
           <IconRow key={id} data-aos="fade-up">
-            <BorderIcon style={{background}}>
+            <BorderIcon style={{background, color: 'white'}}>
               {icon}
             </BorderIcon>
             <CardInfo>

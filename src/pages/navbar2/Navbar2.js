@@ -34,6 +34,7 @@ import {
   ButtonModal
 } from '../../styles/Navbar2.Style';
 import { signOut } from "next-auth/react";
+import { IconButton } from "../../styles/Navabar.Style";
 
 const Navbar2 = ({ handleClick }) => {
   return (
@@ -60,9 +61,9 @@ const Navbar2 = ({ handleClick }) => {
                   <ProfileAdminImage src={ProfileAdmin} alt='Profile Admin' width={40} height={40} />
                 </Profile2Image>
                 <Logout2Icon>
-                  <button onClick={() => signOut()}>
+                  <IconButton onClick={() => signOut()}>
                     <FontAwesomeIcon icon={faRightToBracket} color="black" />
-                  </button>
+                  </IconButton>
                 </Logout2Icon>
               </Toolbar2>
             </Navbar2Div2>
