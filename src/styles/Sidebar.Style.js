@@ -201,9 +201,12 @@ export const ProfileBas = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-top: 200px;
   border-top: 1px solid white;
   padding: 10px;
+`
+export const ProfileBasMere = styled.div`
+  position: relative;
+  top: 260px;
 `
 
 export const ProfileTextBas = styled.div`

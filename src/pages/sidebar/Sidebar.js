@@ -5,7 +5,7 @@ import { faChevronLeft, faChevronRight, faHome, faRightToBracket } from '@fortaw
 import Link from 'next/link';
 import Image from 'next/image';
 import iconRed from "../../app/assets/icon.png";
-import { Div1, Div2, Div3, Div4, List, ListLi, Onligne, OnligneFlex, ProfileBas, ProfileTextBas, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarHeader, SidebarList, SignOut, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from '../../styles/Sidebar.Style';
+import { Div1, Div2, Div3, Div4, List, ListLi, Onligne, OnligneFlex, ProfileBas, ProfileBasMere, ProfileTextBas, RedProductTitle, SidebarContainer, SidebarContainer2, SidebarHeader, SidebarList, SignOut, StyledLink, StyledSidebarNav, ToggleButton, ToggleWrapper } from '../../styles/Sidebar.Style';
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProfileAdmin from "../../app/assets/img-2.jpg"
 import { IconButton, ProfileAdminImage, ProfileImage } from '../../styles/Navabar.Style';
@@ -61,6 +61,7 @@ const Sidebar = () => {
                             </Link>
                         </ListLi>
 
+                        <ProfileBasMere>
                         <ProfileBas>
                             <ProfileImage>
                                 <ProfileAdminImage src={ProfileAdmin} alt='Profile Admin' width={40} height={40} />
@@ -70,11 +71,16 @@ const Sidebar = () => {
                             </ProfileTextBas>
                         </ProfileBas>
 
+
                         <SignOut>
                             <IconButton onClick={() => signOut()}>
                                 <FontAwesomeIcon icon={faRightToBracket} color="white" size='2x'/>
                             </IconButton>
                         </SignOut>
+
+                        </ProfileBasMere>
+
+                       
                         
                         </SidebarList>
                     </SidebarContainer2>
