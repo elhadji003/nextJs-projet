@@ -27,7 +27,7 @@ import {
 import { ButtonModal } from '../../styles/Navbar2.Style';
 import { ErrorMessage, SuccessMessage } from '../../styles/Connexion.Style';
 
-const CreerHotel = ({ handleClose }) => {
+const CreerHotel = () => {
   const router = useRouter();
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
