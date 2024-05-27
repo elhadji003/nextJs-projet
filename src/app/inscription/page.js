@@ -1,12 +1,10 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import Image from "next/image";
 import iconRed from "../assets/icon.png";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRouter } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import {
   ErrorMessage,
   Form,
@@ -27,7 +25,7 @@ import {
   SuccessMessage,
 } from "../../styles/Connexion.Style";
 
-const Inscription = async () => {
+const Inscription = () => {
 
   const [values, setValues] = useState({
     fullName: "",

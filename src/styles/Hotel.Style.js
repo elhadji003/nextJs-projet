@@ -59,6 +59,7 @@ export const ImageDiv = styled.div`
   height: 150px;
   width: 250px;
   overflow: hidden;
+  position: relative;
 
   @media screen and (min-width: 320px) {
     width: auto;
@@ -74,7 +75,7 @@ export const ImageDiv = styled.div`
   };
   @media screen and (min-width: 1280px) {
     width: 300px;
-    height: 150px;
+    height: 200px;
   };
   @media screen and (min-width: 1536px) {
     width: 300px;
@@ -110,17 +111,41 @@ export const Address = styled.span`
 
 export const DestTitle = styled.p`
   font-size: 1rem;
+  font-weight: bold;
   margin: 0.5rem 0;
   color: #555;
 
 `;
 
 export const Price = styled.div`
-  font-size: 0.9rem;
-  color: #ff5a5f;
+  font-size: 1rem;
 `;
 
 export const Modal = styled.div`
   width: 100%;
   hight: 100%; 
+`
+
+
+
+export const TheButtons = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+`
+
+export const TheButtonsIcons = styled.button`
+  border: none;
+  background: none;
+  color: black;
+  position: relative;
+  
+`
+
+export const SeeAllButtons = styled.div`
+  display: flex;
+  flex-direction: column;
+  // padding: 0.5rem;
+  // transition: .4s;
 `

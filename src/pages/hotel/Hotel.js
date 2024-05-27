@@ -1,15 +1,7 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import img1 from "../../app/assets/img1.png";
-import img2 from "../../app/assets/img2.png";
-import img3 from "../../app/assets/img3.png";
-import img4 from "../../app/assets/img4.png";
-import img5 from "../../app/assets/img5.png";
-import img6 from "../../app/assets/img6.png";
-import img7 from "../../app/assets/img7.png";
-import img8 from "../../app/assets/img8.png";
+'use client'
 
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   HotelSection,
   SecContent,
@@ -20,91 +12,99 @@ import {
   Address,
   DestTitle,
   Price,
-} from '../../styles/Hotel.Style';
+  TheButtons,
+  TheButtonsIcons,
+  SeeAllButtons,
+} from "../../styles/Hotel.Style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEdit,
+  faEye,
+  faPlusCircle,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
 
+const getProduction = async () => {
+  try {
+    const res = await fetch("api/registerHotel", {
+      cache: "no-store",
+    });
 
-const Data = [
-  {
-    id: 1,
-    imgSrc: img1,
-    destTitle: "Hotel Terrou-Bi",
-    location: "Boulevard Martin Luther King Dakar, 11500",
-    fees: "25000 XOF par nuit",
-  },
-  {
-    id: 2,
-    imgSrc: img2,
-    destTitle: "King Fahd Palace",
-    location: "Rte des Almadies, Dakar",
-    fees: "20000 XOF par nuit",
-  },
-  {
-    id: 3,
-    imgSrc: img3,
-    destTitle: "Radisson Blu Hotel",
-    location: "Rte de la Corniche O, Dakar 16868",
-    fees: "22000 XOF par nuit",
-  },
-  {
-    id: 4,
-    imgSrc: img4,
-    destTitle: "Pullman Dakar Teranga",
-    location: "Place de l`Independance, 10 Rue PL 29, Dakar",
-    fees: "30000 XOF par nuit",
-  },
-  {
-    id: 5,
-    imgSrc: img5,
-    destTitle: "Hôtel Lac Rose",
-    location: "Lac Rose, Dakar",
-    fees: "25000 XOF par nuit",
-  },
-  {
-    id: 6,
-    imgSrc: img6,
-    destTitle: "Hôtel Saly",
-    location: "Mbour, Sénégal",
-    grade: "CULTURAL RELAX",
-    fees: "20000 XOF par nuit",
-  },
-  {
-    id: 7,
-    imgSrc: img7,
-    destTitle: "Hôtel Saly",
-    location: "Mbour, Sénégal",
-    grade: "CULTURAL RELAX",
-    fees: "20000 XOF par nuit",
-  },
-  {
-    id: 8,
-    imgSrc: img8,
-    destTitle: "Hôtel Saly",
-    location: "Mbour, Sénégal",
-    grade: "CULTURAL RELAX",
-    fees: "20000 XOF par nuit",
-  },
-];
+    if (!res.ok) {
+      throw new Error("Failed to fetch products");
+    }
+
+    const data = await res.json();
+    console.log("Fetched products:", data);
+    return data;
+  } catch (error) {
+    console.log("Error loading products: ", error);
+    return { products: [] };
+  }
+};
 
 const Hotel = () => {
+  const [products, setProducts] = useState([]);
+  const [seeButtons, setSeeButtons] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getProduction();
+      setProducts(data.products);
+    };
+    fetchData();
+  }, []);
+
+  const handleSeeButton = (index) => {
+    setSeeButtons(index === seeButtons ? null : index);
+  };
+
   return (
     <HotelSection>
       <SecContent>
-        {Data.map(({ id, imgSrc, destTitle, location, fees }) => {
-          return (
-            <SingleDestination key={id} data-aos="fade-up">
+        {products.length > 0 ? (
+          products.map((product, index) => (
+            <SingleDestination key={index} data-aos="fade-up">
               <ImageDiv>
-                <Image src={imgSrc} alt={destTitle} />
+                <TheButtons>
+                  <TheButtonsIcons onClick={() => handleSeeButton(index)}>
+                    <FontAwesomeIcon icon={faPlusCircle} color="white" />
+                  </TheButtonsIcons>
+                  {seeButtons === index && (
+                    <SeeAllButtons>
+                      <TheButtonsIcons>
+                        {" "}
+                        <FontAwesomeIcon icon={faTrash} color="red" />{" "}
+                      </TheButtonsIcons>
+                      <TheButtonsIcons>
+                        {" "}
+                        <FontAwesomeIcon icon={faEdit} color="yellow" />{" "}
+                      </TheButtonsIcons>
+                      <TheButtonsIcons>
+                        {" "}
+                        <FontAwesomeIcon icon={faEye} color="skyblue" />{" "}
+                      </TheButtonsIcons>
+                    </SeeAllButtons>
+                  )}
+                </TheButtons>
+                <Image 
+                  src={product.imgName} 
+                  alt="img" 
+                  width={300} height={200} 
+                />
               </ImageDiv>
               <CardInfo>
                 <Continent>
-                  <Address>{location}</Address>
+                  <Address>{product.address}</Address>
                 </Continent>
-                <DestTitle>{destTitle}</DestTitle>
-                <Price>{fees}</Price>
+                <DestTitle>{product.nameHotel}</DestTitle>
+                <Price>{product.price} par nuit</Price>
               </CardInfo>
             </SingleDestination>
-          );
-        })}
+          ))
+        ) : (
+          <div>No products available</div>
+        )}
       </SecContent>
     </HotelSection>
   );

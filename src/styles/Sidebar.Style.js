@@ -177,26 +177,6 @@ export const Div4 = styled.div`
 
 `;
 
-// export const StyledLink = styled.a`
-//   position: relative;
-//   text-decoration: none;
-//   display: flex;
-//   align-items: center;
-//   gap: 0.75rem;
-//   height: 3rem; 
-//   transition: background-color 0.3s, color 0.3s;
-//   display: inline-flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: gray;
-//   font-size: bold; 
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   max-width: 12rem;
-//   padding: 0.75rem;
-// `;
-
 export const ProfileBas = styled.div`
   display: flex;
   align-items: center;
