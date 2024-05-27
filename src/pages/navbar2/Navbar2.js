@@ -20,23 +20,12 @@ import {
   Navbar2Div2,
   Flex2Container,
   Search2Container,
-  Search2Input,
-  Header2Title,
-  Header2Subtitle,
-  Header2Container,
-  Hidden2Container,
-  Flex2ColumnContainer,
-  Header1Subtitle,
-  Header3Title,
-  HeaderButtonPlus,
-  StyleSpanCreer,
-  StyleIconCreer,
-  ButtonModal
+  Search2Input
 } from '../../styles/Navbar2.Style';
 import { signOut } from "next-auth/react";
 import { IconButton } from "../../styles/Navabar.Style";
 
-const Navbar2 = ({ handleClick }) => {
+const Navbar2 = () => {
   return (
     <>
       <Navbar2Container>
@@ -69,28 +58,6 @@ const Navbar2 = ({ handleClick }) => {
             </Navbar2Div2>
           </Navbar2Div1>
         </Navbar2Nav>
-        <Header2Container>
-          <Hidden2Container>
-            <Flex2ColumnContainer>
-              <Header2Title>
-                <Header1Subtitle>Hotel</Header1Subtitle>
-                <Header2Subtitle>8</Header2Subtitle>
-              </Header2Title>
-              <Header3Title>
-                <Header1Subtitle>
-                  <ButtonModal onClick={handleClick}>
-                    <HeaderButtonPlus>
-                      <StyleIconCreer>
-                        <FontAwesomeIcon icon={faPlus} size="1x" color="black" />
-                      </StyleIconCreer>
-                      <StyleSpanCreer>Creer un nouvel hotel</StyleSpanCreer>
-                    </HeaderButtonPlus>
-                  </ButtonModal>
-                </Header1Subtitle>
-              </Header3Title>
-            </Flex2ColumnContainer>
-          </Hidden2Container>
-        </Header2Container>
       </Navbar2Container>
     </>
   );

@@ -59,35 +59,38 @@ const CreerHotel = ({ handleClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-        const res = await fetch("/api/registerHotel", {
-          method: "POST",
-          body: JSON.stringify({
-            nameHotel: values.nameHotel,
-            address: values.address,
-            email: values.email,
-            price: values.price,
-            number: values.number,
-            devise: values.devise,
-          }),
+      const res = await fetch("/api/registerHotel", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nameHotel: values.nameHotel,
+          address: values.address,
+          email: values.email,
+          price: values.price,
+          number: values.number,
+          devise: values.devise,
+        }),
       });
-
+  
       const data = await res.json();
-
+  
       if (res.ok) {
         setValues({
-          nameHotel: '',
-          address: '',
-          email: '',
-          price: '',
-          number: '',
-          devise: '',
+          nameHotel: "",
+          address: "",
+          email: "",
+          price: "",
+          number: "",
+          devise: "",
         });
         setImage(null);
         setMessage("Hotel created successfully!");
         setTimeout(resetMessage, 5000);
-        router.refresh();
+        router.push('/cardHotel');
       } else {
         setIsError(true);
         setMessage(data.message || "Registration failed. Please try again.");
@@ -99,14 +102,17 @@ const CreerHotel = ({ handleClose }) => {
       setTimeout(resetMessage, 5000);
     }
   };
+  
 
   return (
     <Container>
       <Card>
         <Header>
-          <ButtonModal onClick={handleClose}>
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </ButtonModal>
+          <a href="/cardHotel">
+            <ButtonModal>
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </ButtonModal>
+          </a>
           <Title>Créer un nouveau hôtel</Title>
         </Header>
         <Form onSubmit={handleSubmit}>
