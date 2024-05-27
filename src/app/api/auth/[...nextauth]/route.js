@@ -4,6 +4,7 @@ import { connectMongoDB } from "../../../../../lib/mongodb";
 import User from "../../../../../models/user";
 import bcrypt from "bcryptjs";
 
+
 export const authOptions = {
   providers: [
     CredentialsProvider({
@@ -49,3 +50,4 @@ export const authOptions = {
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
+
